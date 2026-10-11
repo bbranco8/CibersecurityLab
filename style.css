@@ -38,13 +38,14 @@ p {
     grid-column: 1;
     background: #ffffff;
     padding: 3vw;
+    padding-top: 2vh;
     width: 25vw;
     height: 100vh;
     overflow-y: auto;
 }
 
 .space {
-    padding-top: 2vh;
+    padding-top: 1.3vh;
 }
 
 #canvas-container {
