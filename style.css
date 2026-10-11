@@ -9,10 +9,11 @@
 }
 
 
-body {
+html, body {
     margin: 0;
     font-family: sans-serif;
-    background: #111;
+    height: 100vh;
+    overflow: hidden;
 }
 
 h2 {
@@ -38,6 +39,8 @@ p {
     background: #ffffff;
     padding: 3vw;
     width: 15vw;
+    height: 100vh;
+    overflow-y: auto;
 }
 
 .space {
@@ -48,7 +51,7 @@ p {
     grid-column: 2;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: top;
 }
 
 /* SLIDERS */
