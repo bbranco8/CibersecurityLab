@@ -45,7 +45,7 @@ p {
 }
 
 .space {
-    padding-top: 1.3vh;
+    padding-top: 1.6vh;
 }
 
 #canvas-container {
@@ -116,7 +116,7 @@ button {
 
 #final_buttons {
     position: absolute;
-    bottom: 8vh;
+    bottom: 5vh;
 }
 
 
