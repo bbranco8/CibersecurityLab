@@ -1,0 +1,204 @@
+@font-face {
+    font-family: Berthold;
+    src: url(BertholdAkzidenzGroteskExtended.otf);
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(InterVariableFont.ttf);
+}
+
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #111;
+}
+
+h2 {
+    font-family: Berthold;
+}
+
+p {
+    font-family: Inter;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 1.2rem; /* 14.4pt */
+    line-height: 1.37rem; /* 16.4pt */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 100vh;
+}
+
+.controls {
+    grid-column: 1;
+    background: #ffffff;
+    padding: 3vw;
+    width: 15vw;
+}
+
+.space {
+    padding-top: 2vh;
+}
+
+#canvas-container {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* SLIDERS */
+input[type="range"] {
+    appearance: none;
+    width: 100%;
+    height: 4px;
+    background: #ccc;
+    border-radius: 2px;
+    outline: none;
+    margin: 10px 0;
+}
+
+/* linha preenchida */
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 4px;
+    background: linear-gradient(to right, #D2232A var(--value), #ccc var(--value));
+    border-radius: 2px;
+}
+
+/* bolinha */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    background: #D2232A;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -5px; /* alinha com a linha */
+}
+
+/* Firefox */
+input[type="range"]::-moz-range-track {
+    height: 4px;
+    background: #ccc;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    background: #00ff88;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+
+button { 
+    background-color: #D2232A;
+    border: none;
+    color: black;
+    padding: 0.4vh 0.4vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 12px;
+} 
+
+#final_buttons {
+    position: absolute;
+    bottom: 8vh;
+}
+
+
+/* animation */
+.checkbox_animation .input_animation {
+    appearance: none;
+    background-color: #dfe1e4;
+    border-radius: 72px;
+    border-style: none;
+    flex-shrink: 0;
+    height: 20px;
+    margin: 0;
+    margin-left: 1vw;
+    position: relative;
+    width: 30px;
+}
+
+.checkbox_animation .input_animation::before {
+    bottom: -6px;
+    content: "";
+    left: -6px;
+    position: absolute;
+    right: -6px;
+    top: -6px;
+}
+
+.checkbox_animation .input_animation,
+.checkbox_animation .input_animation::after {
+    transition: all 100ms ease-out;
+}
+
+.checkbox_animation .input_animation::after {
+    background-color: #fff;
+    border-radius: 50%;
+    content: "";
+    height: 14px;
+    left: 3px;
+    position: absolute;
+    top: 3px;
+    width: 14px;
+}
+
+.checkbox_animation input[type=checkbox] {
+    cursor: default;
+}
+
+.checkbox_animation .input_animation:hover {
+    background-color: #cdc9c9;
+    transition-duration: 0s;
+}
+
+.checkbox_animation .input_animation:checked {
+    background-color: #D2232A;
+}
+
+.checkbox_animation .input_animation:checked::after {
+    background-color: #fff;
+    left: 13px;
+}
+
+.checkbox_animation :focus:not(.focus-visible) {
+    outline: 0;
+}
+
+.checkbox_animation .input_animation:checked:hover {
+    background-color: #D2232A;
+}
+
+
+
+#progressBar {
+    position: fixed !important;
+
+    left: 40px !important;
+    bottom: 30px !important;
+    top: auto !important;
+
+    width: auto !important;
+    display: inline-block;
+
+    font-family: Inter;
+}
+
+::file-selector-button {
+    margin-top: 1vh;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 25px;
+    background-color: #D2232A;
+}

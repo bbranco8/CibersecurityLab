@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CS LAB Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+        <section class="controls">
+            <h2>CS LAB TOOL</h2>
+            
+            <div class="space">
+                <label>Threshold</label>
+                <input type="range" id="threshold" min="0" max="100" value="80">
+            </div>
+
+            <div class="space">
+                <button onclick="regenerate()">Randomize</button>
+            </div>
+
+            <br> <br>
+
+            <div class="space">
+                <label>Layout</label>
+                <select id="layoutSelect">
+                    <option value="cover" selected>Cover</option>
+                    <option value="slide">Slide</option>
+                </select>
+            </div>
+
+            <div class="space">
+                <label>Title</label> 
+                <input type="text" id="titleInput" placeholder="eg 'AI_H4CKING'">
+            </div>
+
+            <div class="space cover">
+                <label>Subtitle</label>
+                <input type="text" id="subtitleInput" placeholder="eg 'João Donato'">
+            </div>
+            
+            <div class="space">
+                <label>Info</label>
+                <input type="text" id="infoInput" placeholder="eg 'Wednesday, 11th'">
+            </div>
+
+            <div class="space cover">
+                <label>2nd Info</label>
+                <input type="text" id="info2Input" placeholder="eg 'Advanced vectors'">
+            </div>
+
+            <br> <br>
+
+            <div class="space">
+                <label>Background Image</label>
+                <input type="file" id="bgUpload" accept="image/*">
+            </div>
+            
+            <br> <br>
+            <div class="checkbox_animation space">
+                 <label> Animation <input type="checkbox" id="animationToggle" class="input_animation"> </label>
+            </div>
+
+            <div class="checkbox_animation space">
+                <label> Logos <input type="checkbox" id="logoToggle" class="input_animation" checked> </label>
+            </div>
+
+            <div id="final_buttons" class="space">
+                <button onclick="clearCanvas()">Clear</button>
+                
+                <button onclick="saveCanvasImage()">Download</button>
+            </div>
+        </section>
+
+        <section id="canvas-container"></section>
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5.gif.js@1.0.0/p5.gif.min.js"></script>
+    <script src="index.js"></script>
+
+</body>
+
+</html>
